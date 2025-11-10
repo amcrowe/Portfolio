@@ -1,0 +1,288 @@
+/* Universal selector */
+* {
+  box-sizing: border-box;
+}
+
+/* Element selector */
+/* Typography: font-family, color */
+/* Background color */
+/* Margin */
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Tahoma", Verdana, sans-serif;
+  line-height: 1.5;
+  color: #0f172a;
+  background-color: #f8fafc;
+}
+
+/* Element selector (multiple) */
+/* Margin and text alignment */
+h1,
+h2,
+h3 {
+  margin: 0.2rem 0 0.6rem;
+  text-align: center;
+}
+
+/* Element selector */
+/* Margin */
+p {
+  margin: 0 0 1rem;
+}
+
+/* Element selector */
+/* Border and margin */
+hr {
+  border: 0;
+  border-top: 1px solid #e2e8f0;
+  margin: 1rem 0;
+}
+
+/* Class selector (multiple) */
+/* Padding, background-color, border, text alignment */
+.site-header,
+.site-footer {
+  padding: 1rem;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e2e8f0;
+  text-align: center;
+}
+
+/* Class selector */
+/* Border properties */
+.site-footer {
+  border-top: 1px solid #e2e8f0;
+  border-bottom: 0;
+}
+
+/* Class selector */
+/* Typography: color, font-style */
+.subtitle {
+  color: #475569;
+  font-style: italic;
+}
+
+/* ID selector */
+/* Padding, background-color, border, margin */
+#current-date {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  background-color: #eef2ff;
+  border: 1px solid #c7d2fe;
+  border-radius: 999px;
+  margin: 0.25rem 0 0.75rem;
+}
+
+/* Descendant selector */
+/* List-style properties, padding, margin */
+.site-nav .nav-list {
+  list-style: none; 
+  padding: 0;
+  margin: 0.5rem 0 0;
+  display: flex; 
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+/* Descendant selector */
+/* Typography: color, text-decoration */
+/* Padding and border */
+.site-nav a {
+  text-decoration: none;
+  color: #0ea5e9;
+  padding: 0.25rem 0.5rem;
+  border-radius: 6px;
+  border: 1px solid transparent;
+}
+
+/* Attribute selector */
+/* Background-color, border, typography */
+.site-nav a[aria-current="page"] {
+  border-color: #7dd3fc;
+  background-color: #e0f2fe;
+  font-weight: 600;
+}
+
+/* Pseudo-class selector */
+/* Background-color and border */
+.site-nav a:hover,
+.site-nav a:focus {
+  border-color: #7dd3fc;
+  background-color: #e0f2fe;
+}
+
+/* Class selector */
+/* Typography: color, font-size */
+.muted {
+  color: #64748b;
+  font-size: 14px;
+}
+
+/* Class selector */
+/* Padding, background-color, border, margin */
+/* Typography: font-size */
+.badge {
+  display: flex;
+  padding: 0.125rem 0.5rem;
+  background-color: #f1f5f9;
+  border: 1px solid #cbd5e1;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  justify-content: center;
+  align-items: center;
+  width:fit-content;
+  margin: 0 auto;
+}
+
+/* Class selector (multiple) */
+/* Background-color, border, padding, margin */
+.intro,
+.job,
+.media-block,
+.contact-form,
+.letter {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 1rem;
+  margin: 1rem;
+}
+
+/* Class selector */
+/* Background-color, border, margin */
+.data {
+  width: 97%;
+  border-collapse: collapse;
+  background-color: #ffffff;
+  margin: 1rem;
+  border: 1px solid #e2e8f0;
+  text-align: center;
+}
+
+/* Descendant selector */
+/* Typography: font-weight */
+/* Padding */
+.data caption {
+  text-align: center;
+  padding: 0.5rem;
+  font-weight: 600;
+}
+
+/* Descendant selector (multiple elements) */
+/* Padding and border */
+.data th,
+.data td {
+  padding: 0.5rem;
+  border-top: 1px solid #e2e8f0;
+}
+
+/* Class selector */
+/* Margin */
+.media {
+  margin: 0 0 1rem;
+}
+
+/* Descendant selector (multiple) */
+.media img,
+.media video,
+.media audio {
+  display: block;
+  max-width: 100%;
+}
+
+/* Class selector */
+/* Margin */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem 1rem;
+  margin-bottom: 1rem;
+}
+
+/* Descendant selector */
+/* Typography: font-weight */
+.grid label {
+  font-weight: 600;
+}
+
+/* Descendant selector */
+/* Padding and border */
+.grid input {
+  padding: 0.5rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+}
+
+/* Element selector (multiple) */
+/* Padding, border, margin */
+textarea,
+select {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  margin-bottom: 0.75rem;
+}
+
+/* Descendant selector */
+/* Margin */
+.inline label {
+  margin-right: 1rem;
+}
+
+/* Class selector */
+/* Margin */
+.actions {
+  margin-top: 0.5rem;
+}
+
+/* Class selector */
+/* Padding, border, background-color */
+.btn {
+  padding: 0.5rem 0.9rem;
+  border: 1px solid #94a3b8;
+  border-radius: 8px;
+  background: #f8fafc;
+  cursor: pointer;
+}
+
+/* Pseudo-class selector */
+/* Background-color */
+.btn:hover {
+  background: #e2e8f0;
+}
+
+/* Class selector */
+/* Margin */
+.image-text-container {
+  display: flex;
+  text-align: center; 
+  justify-content: center; 
+  gap: 2rem; 
+  max-width: 900px;             
+  margin: 0 auto;               
+}
+
+/* Class selector */
+.text {
+  flex: 1; 
+  max-width: 500px;
+}
+
+/* Class selector */
+/* Border */
+.profile-photo {
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* Class selector */
+/* Margin and padding */
+.form-row {
+  display: flex;
+  flex-direction: column;
+  max-width: 700px;     
+  margin: 0 auto;       
+  padding: 1rem;         
+  text-align: left; 
+}

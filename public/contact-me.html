@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Contact Me — Adam M. Crowe</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>
+  emailjs.init("Ath75xiMqVIZ8W2A0");
+</script>
+  </head>
+  <body>
+    <header class="site-header">
+      <h1 id="top">Adam M. Crowe</h1>
+      <p class="subtitle">
+        <strong>Network Project Engineer</strong>
+        <span class="muted">| Wilmington, NC</span>
+        <span class="muted">| acrowes@outlook.com</span>
+      </p>
+      <div id="current-date" class="date-pill" aria-live="polite"></div>
+      <nav class="site-nav">
+        <ul class="nav-list">
+          <li><a href="resume.html">Resumé</a></li>
+          <li><a href="cover-letter.html">Cover Letter</a></li>
+          <li>
+            <a href="career-goals.html">Career Goals</a>
+          </li>
+          <li><a href="contact-me.html" aria-current="page">Contact Me</a></li>
+          <li><a href="https://www.linkedin.com/in/amcrowe/" target="_blank">LinkedIn</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+
+<hr />
+
+      <section class="contact-form">
+        <h2><u>Contact Me</u></h2>
+        <hr />  
+        <section class="media-block" style="max-width: 700px; margin: 0 auto;">
+        <form id="contact-form">
+                <div>
+                  <div class="form-row">
+                    <label for="firstName">First Name</label>
+                    <input type="text" name="firstName" id="firstName">
+                    </div>
+                    <div class="form-row">
+                    <label for="lastName">Last Name</label>
+                    <input type="text" name="lastName" id="lastName">
+                    </div>
+                    <div class="form-row">
+                    <label for="companyName">Company/Title</label>
+                    <input type="text" name="companyName" id="companyName">
+                    </div>
+                    <div class="form-row">
+                    <label for="yourEmail">Email Address</label>
+                    <input type="email" name="yourEmail" id="yourEmail">
+                    </div>
+                    <div class="form-row">
+                    <label for="yourPhone">Phone Number</label>
+                    <input type="tel" name="yourPhone" id="yourPhone">
+                    </div>
+                    <label for="message">Write a Message</label><br>
+                    <textarea name="message" id="message"></textarea><br>
+                    <fieldset>
+                        <legend>Best Contact Time</legend>
+                        <input type="radio" id="am" name="bestTime" value="am">
+                        <label for="am">a.m.</label>
+                        <input type="radio" id="pm" name="bestTime" value="pm">
+                        <label for="pm">p.m.</label>
+                        <input type="radio" id="anytime" name="bestTime" value="anytime">
+                        <label for="anytime">anytime</label>
+                    </fieldset><br>
+                    <label for="contactMethod">Preferred Contact Method</label>
+                    <select name="contactMethod" id="contactMethod">
+                        <option value="phone">Phone</option>
+                        <option value="email">Email</option>
+                        <option value="text">Text</option>
+                    </select>
+                    <br><br>
+                    <button type="submit">Submit</button>
+                    <button type="reset">Reset</button>
+                </div>
+            </form>
+        </section>
+        </section>
+        
+        <hr />
+
+        <section>
+      <p class="site-nav" style="text-align: center;">
+        <a href="#top">Back to top</a>
+      </p>
+    </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>
+        <small>&copy; <span id="year"></span> Adam M. Crowe</small>
+      </p>
+    </footer>
+
+<script>
+  const dateBox = document.getElementById("current-date");
+  const now = new Date();
+  dateBox.textContent = now.toLocaleString();
+
+  document.getElementById("year").textContent = now.getFullYear();
+
+  console.log("Career Goals loaded — data hydrated at", now.toISOString());
+
+  const form = document.getElementById("contact-form");
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const params = {
+      from_first: form.firstName.value,
+      from_last: form.lastName.value,
+      company: form.companyName.value,
+      reply_to: form.yourEmail.value,
+      phone: form.yourPhone.value,
+      message: form.message.value,
+      bestTime: form.bestTime.value,
+      contactPref: form.contactMethod.value,
+    };
+
+    try {
+      const res = await emailjs.send("service_vg8nvnw", "template_lz2tytb", params);
+      if (res.status === 200) {
+        alert("Message sent successfully");
+        form.reset();
+      } else {
+        alert("Something went wrong. Try again later.");
+      }
+    } catch (err) {
+      console.error(err);
+      alert("Network error. Please try again.");
+    }
+  });
+</script>
+    </body>
+</html>

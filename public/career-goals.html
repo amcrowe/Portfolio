@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Career Goals — Adam M. Crowe</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <h1 id="top">Adam M. Crowe</h1>
+      <p class="subtitle">
+        <strong>Network Project Engineer</strong>
+        <span class="muted">| Wilmington, NC</span>
+        <span class="muted">| acrowes@outlook.com</span>
+      </p>
+      <div id="current-date" class="date-pill" aria-live="polite"></div>
+      <nav class="site-nav">
+        <ul class="nav-list">
+          <li><a href="resume.html">Resumé</a></li>
+          <li><a href="cover-letter.html">Cover Letter</a></li>
+          <li>
+            <a href="career-goals.html" aria-current="page">Career Goals</a>
+          </li>
+          <li><a href="contact-me.html">Contact Me</a></li>
+          <li><a href="https://www.linkedin.com/in/amcrowe/" target="_blank">LinkedIn</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <hr />
+      <section class="media-block">
+        <h2><u>My Career Goals</u></h2>
+        <hr />
+        <article>
+          <section class="media-block">
+          <div class="image-text-container">
+            <div class="text">
+              <br />
+              <br />
+              <br />
+              <br />
+              <ol>
+                <li>Become a subject-matter expert in enterprise networking by partnering with engineers and architects to design, implement, and troubleshoot advanced infrastructures.</li>
+                <br />
+                <li>Deepen specialization in MPLS design and operations, using LDP for label distribution and delivering scalable Layer-2 VXLAN overlays across a Layer-3 core.</li>
+                <br />  
+                <li>Expand hands-on wireless expertise, including WLAN design, controller-based architectures, and protocols such as 802.11ax, WPA3, RRM, and fast roaming.</li>
+              </ol>
+            </div>
+            <figure class="media">
+              <img src="./assets/Headshot.JPG" alt="Adam Crowe headshot" width="400px" height="500px" class="profile-photo" />
+              <cite class="muted">Photo of Adam M. Crowe</cite>
+            </figure>
+            </div>
+          </section>
+        </article>
+  
+      </section>
+
+        <hr />
+
+        <section class="media-block">
+          <h2><u>Networking Insight</u></h2>
+          <hr />
+          <section class="media-block">
+            <div class="image-text-container">
+              <div class="text">
+                <p>
+                  In addition to my written career goals, I’ve included a short audio clip from 'Packet Pushers'. The featured
+                  clip, “N Is for Networking,” is part of the Packet Pushers podcast series which is a respected resource that
+                  explores real-world networking concepts, technologies, and industry trends. It aligns with my commitment to
+                  continuous learning and staying informed about advancements in enterprise networking.
+                </p>
+              </div>
+            </div>
+
+            <figure style="text-align: center;">
+                <audio src="./assets/Four-Goals-of-Network-Design.mp3" controls></audio><br>
+                <cite class="muted">
+                  Audio clip from Packet Pushers podcast, <a href="https://podcasts.apple.com/us/podcast/four-goals-of-network-design/id1772772350?i=1000711693593" target="_blank">'N Is for Networking'</a> , found on Apple Podcasts.
+                </cite>
+            </figure>
+          </section>
+        </section>
+
+        <hr />
+
+        <section class="media-block">
+          <h2><u>What Motivates Me</u></h2>
+          <hr />
+          <section class="media-block" style="text-align: center;">
+        <figure style="text-align: center;">
+          <video src="./assets/Motivation.mp4" alt="Motivation" controls width="400px" style="border-radius: 8px;"></video><br>
+          <cite class="muted">
+            A short video on what motivates me in my career.
+            </cite>
+        </figure>
+        </section>
+      </section>
+        
+        <hr />
+
+        <section>
+      <p class="site-nav" style="text-align: center;">
+        <a href="#top">Back to top</a>
+      </p>
+    </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>
+        <small>&copy; <span id="year"></span> Adam M. Crowe</small>
+      </p>
+    </footer>
+
+    <script>
+      const dateBox = document.getElementById("current-date");
+      const now = new Date();
+      dateBox.textContent = now.toLocaleString();
+
+      document.getElementById("year").textContent = now.getFullYear();
+
+      console.log("Career Goals loaded — data hydrated at", now.toISOString());
+    </script>
+  </body>
+</html>

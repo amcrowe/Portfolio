@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Cover Letter — Adam M. Crowe</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <header class="site-header">
+    <h1 id="top">Adam M. Crowe</h1>
+    <p class="subtitle">
+      <strong>Network Project Engineer</strong>
+      <span class="muted">| Wilmington, NC</span>
+      <span class="muted">| acrowes@outlook.com</span>
+    </p>
+    <div id="current-date" class="date-pill" aria-live="polite"></div>
+    <nav class="site-nav">
+      <ul class="nav-list">
+        <li><a href="resume.html">Resumé</a></li>
+        <li>
+          <a href="cover-letter.html" aria-current="page">Cover Letter</a>
+        </li>
+        <li><a href="career-goals.html">Career Goals</a></li>
+        <li><a href="contact-me.html">Contact Me</a></li>
+        <li><a href="https://www.linkedin.com/in/amcrowe/" target="_blank">LinkedIn</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <hr />
+    <article class="letter">
+      <section>
+        <p>
+          <span class="mark-like">Dear Hiring Manager,</span>
+        </p>
+
+        <p>
+          Something <strong>great</strong> just came across my desk, it's your
+          <em>open position</em>, and I can say with full confidence that it
+          aligns perfectly with my skills, experience, and the way I operate
+          as your <em>new potential candidate</em>. I bring a unique mix of
+          technical expertise, leadership under pressure, and a results-driven
+          mindset that’s been sharpened through careers in both network
+          engineering and public service.
+        </p>
+
+        <p>
+          In my current role as a <strong>Network Project Engineer</strong> at
+          Provalus, I manage large-scale 911 network migrations across 20
+          states. I regularly coordinate between vendors, government agencies,
+          and internal engineering teams to ensure operational uptime and FCC
+          compliance. Before that, I led a Network Operations Center of 16
+          analysts, within Provalus, boosting SLA performance to
+          <strong>99%</strong> and establishing training and escalation
+          systems that still guide the department today.
+        </p>
+
+        <p>
+          I bring hands-on troubleshooting across Cisco platforms, deep packet
+          analysis with Wireshark and Nmap, and a service mindset shaped by
+          law enforcement and military experience. I thrive in high-stakes
+          environments where uptime and accuracy matter.
+        </p>
+
+        <p>
+          What makes me <strong><u>different</u></strong> is the blend of
+          discipline from the military, problem-solving from law enforcement,
+          and precision from engineering. Whether I’m troubleshooting BGP
+          routing, documenting PSAP migrations, or mentoring new technicians,
+          I take ownership of every outcome. I’m not just looking for a job,
+          I'm looking for a career I can call my second home. I’m looking for
+          the right environment where I can strengthen systems, empower teams,
+          and deliver measurable results.
+        </p>
+
+        <p>
+          I would love to discuss how I can support your network reliability
+          goals and how I can bring that same level of commitment and energy
+          to your organization. Thank you for your time and consideration and
+          I look forward to connecting soon.
+        </p>
+
+        <p>
+          Sincerely,<br /><br /><mark><strong>Your Future Employee:</strong></mark><br />
+          Adam M. Crowe
+        </p>
+      </section>
+    </article>
+    <hr />
+  </main>
+
+  <footer class="site-footer">
+    <p>
+      <small>&copy; <span id="year"></span> Adam M. Crowe</small>
+    </p>
+  </footer>
+
+  <script>
+    const dateBox = document.getElementById("current-date");
+    const now = new Date();
+    dateBox.textContent = now.toLocaleString();
+
+    document.getElementById("year").textContent = now.getFullYear();
+
+    console.log("Cover Letter loaded — data hydrated at", now.toISOString());
+  </script>
+</body>
+
+</html>
